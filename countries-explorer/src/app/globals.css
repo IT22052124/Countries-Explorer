@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #195190; /* Turkish Sea */
+  --secondary: #a2a2a1; /* Silver */
+  --dark-bg: #121e2e;
+  --dark-card: #1e2a3b;
+  --dark-card-hover: #2a3a4d;
+  --card-bg: #ffffff;
+  --card-text: #171717;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --transition-speed: 300ms;
+}
+
+.dark {
+  --background: #121e2e; /* Dark background based on Turkish Sea */
+  --foreground: #ededed;
+  --primary: #195190; /* Turkish Sea */
+  --secondary: #a2a2a1; /* Silver */
+  --dark-bg: #121e2e;
+  --dark-card: #1e2a3b;
+  --dark-card-hover: #2a3a4d;
+  --card-bg: #1e2a3b;
+  --card-text: #f9fafb;
+  --card-border: #2a3a4d;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color var(--transition-speed) ease-in-out,
+    color var(--transition-speed) ease-in-out;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  transition: background-color var(--transition-speed) ease-in-out,
+    color var(--transition-speed) ease-in-out;
+}
+
+/* Forced Dark Mode Styles */
+.dark body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+.dark main,
+.dark .min-h-screen,
+.dark [class*="bg-slate-100"],
+.dark [class*="bg-gray-100"] {
+  background-color: var(--dark-bg) !important;
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.dark [class*="bg-white"],
+.dark div[class*="bg-white"],
+.dark section[class*="bg-white"],
+.dark article[class*="bg-white"],
+.dark nav[class*="bg-white"],
+.dark header[class*="bg-white"],
+.dark footer[class*="bg-white"] {
+  background-color: var(--dark-card) !important;
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.dark .bg-white {
+  background-color: var(--card-bg) !important;
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-gray-900 {
+  color: var(--secondary) !important;
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+.dark .text-blue-600,
+.dark .text-indigo-600 {
+  color: var(--primary) !important;
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+.dark .border-gray-200 {
+  border-color: var(--card-border) !important;
+  transition: border-color var(--transition-speed) ease-in-out;
+}
+
+/* Override Tailwind Classes */
+.dark a {
+  color: var(--primary) !important;
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+/* Specific Component Overrides */
+.dark .card,
+.dark [class*="shadow"] {
+  background-color: var(--dark-card) !important;
+  color: var(--foreground) !important;
+  border-color: var(--card-border) !important;
+  transition: background-color var(--transition-speed) ease-in-out,
+    color var(--transition-speed) ease-in-out,
+    border-color var(--transition-speed) ease-in-out;
+}
+
+/* Additional Element Styles */
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Country Card hover effects */
+.country-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    background-color var(--transition-speed) ease-in-out;
+}
+
+.country-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .country-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix for white flash during navigation */
+html.dark,
+.dark body,
+.dark .page-transition {
+  background-color: var(--dark-bg);
+}
+
+html:not(.dark),
+body:not(.dark),
+.page-transition:not(.dark) {
+  background-color: var(--background);
+}
+
+/* General styles can be added here */
+
+/* Additional styles can be added here */
