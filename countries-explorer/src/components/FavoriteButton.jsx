@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 import { addFavorite, removeFavorite } from "@/lib/favoritesApi";
 
-const FavoriteButton = ({ country }) => {
+const FavoriteButton = ({ country, className = "" }) => {
   const [loading, setLoading] = useState(false);
   const {
     isAuthenticated,
@@ -19,7 +19,7 @@ const FavoriteButton = ({ country }) => {
 
   const handleFavoriteToggle = async (e) => {
     e.preventDefault(); // Prevent navigation
-    // e.stopPropagation(); // Stop event propagation
+    e.stopPropagation(); // Stop event propagation
 
     if (!isAuthenticated) {
       openLoginModal();
@@ -65,7 +65,7 @@ const FavoriteButton = ({ country }) => {
     }
   };
 
-  if (!country || !isAuthenticated) {
+  if (!country) {
     return null;
   }
 
@@ -73,8 +73,10 @@ const FavoriteButton = ({ country }) => {
     <button
       onClick={handleFavoriteToggle}
       disabled={loading}
-      className="y top-2 right-2 p-2 bg-white bg-opacity-80 dark:bg-slate-700 dark:bg-opacity-80 rounded-full shadow-md hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all"
-      aria-label="Remove from favorites"
+      className={`absolute top-2 right-2 p-2 bg-white bg-opacity-80 dark:bg-slate-700 dark:bg-opacity-80 rounded-full shadow-md hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all ${className}`}
+      aria-label={
+        isCountryFavorited ? "Remove from favorites" : "Add to favorites"
+      }
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

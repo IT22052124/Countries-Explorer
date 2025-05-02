@@ -6,7 +6,7 @@ import FavoriteButton from "./FavoriteButton";
 
 const CountryCard = ({ country }) => {
   return (
-    <div className="country-card bg-white dark:bg-[#1E2A3B] rounded-lg shadow-md overflow-hidden transition-shadow duration-300 relative border border-gray-100 dark:border-[#2A3A4D]">
+    <div className="country-card bg-white dark:bg-[#1E2A3B] rounded-lg shadow-md overflow-hidden transition-shadow duration-300 relative border border-gray-100 dark:border-[#2A3A4D] hover:shadow-lg">
       <Link href={`/country/${country.cca3}`} className="block">
         <div className="relative h-40">
           <Image
@@ -18,10 +18,10 @@ const CountryCard = ({ country }) => {
           />
         </div>
         <div className="p-4">
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          <h2 className="text-lg font-semibold text-black dark:text-white mb-2">
             {country.name.common}
           </h2>
-          <div className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+          <div className="space-y-1 text-sm text-black dark:text-gray-300">
             <p>
               <span className="font-medium">Population:</span>{" "}
               {country.population.toLocaleString()}

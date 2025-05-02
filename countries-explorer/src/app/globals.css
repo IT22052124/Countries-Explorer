@@ -144,15 +144,13 @@ body {
 }
 
 /* Fix for white flash during navigation */
-html.dark,
-.dark body,
-.dark .page-transition {
+.dark {
   background-color: var(--dark-bg);
 }
 
-html:not(.dark),
-body:not(.dark),
-.page-transition:not(.dark) {
+html,
+body,
+.page-transition {
   background-color: var(--background);
 }
 

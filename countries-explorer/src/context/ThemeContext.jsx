@@ -5,6 +5,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext({
   theme: "light",
   toggleTheme: () => {},
+  resetTheme: () => {},
+  clearThemeSettings: () => {},
 });
 
 export function ThemeProvider({ children }) {
@@ -16,10 +18,8 @@ export function ThemeProvider({ children }) {
     if (typeof document !== "undefined") {
       if (newTheme === "dark") {
         document.documentElement.classList.add("dark");
-        document.documentElement.classList.remove("light");
       } else {
         document.documentElement.classList.remove("dark");
-        document.documentElement.classList.add("light");
       }
       // Also set a data attribute for additional styling options
       document.documentElement.setAttribute("data-theme", newTheme);

@@ -164,7 +164,7 @@ const CountryList = () => {
   };
 
   return (
-    <div className="mx-auto container px-4 py-8">
+    <div className="mx-auto container px-4 py-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
       {/* Tabs */}
       {isAuthenticated && (
         <div className="mb-6 border-b border-gray-200 dark:border-gray-700">
@@ -212,11 +212,11 @@ const CountryList = () => {
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ) : filteredCountries.length === 0 ? (
-            <div className="text-center py-12">
-              <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+            <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow p-8">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-300">
                 No countries found
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 mt-2">
+              <p className="text-gray-700 dark:text-gray-400 mt-2">
                 Try adjusting your search or filter criteria
               </p>
             </div>
@@ -244,13 +244,13 @@ const CountryList = () => {
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
             </div>
           ) : filteredFavorites.length === 0 ? (
-            <div className="text-center py-12">
-              <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+            <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow p-8">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-300">
                 {favorites.length === 0
                   ? "No favorite countries yet"
                   : "No matches found"}
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 mt-2">
+              <p className="text-gray-700 dark:text-gray-400 mt-2">
                 {favorites.length === 0
                   ? "Start exploring and add countries to your favorites"
                   : "Try adjusting your search criteria"}
