@@ -7,8 +7,7 @@ import { isAuthenticated, getCurrentUser } from "@/lib/authApi";
 import { useAuth } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL||"https://automatic-keelia-sliit-malabe-58923cd1.koyeb.app/api";
 
 export default function ProfilePage() {
   const router = useRouter();
