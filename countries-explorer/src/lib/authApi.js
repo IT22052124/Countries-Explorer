@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL||"https://automatic-keelia-sliit-malabe-58923cd1.koyeb.app/api";
 
 // Create an axios instance with default configurations
 const api = axios.create({
