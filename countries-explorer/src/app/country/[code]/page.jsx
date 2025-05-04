@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import FavoriteButton from "@/components/FavoriteButton";
+import Footer from "@/components/Footer";
 import { getCountryByCode } from "@/lib/api";
 
 export default function CountryDetailPage({ params }) {
@@ -43,8 +44,11 @@ export default function CountryDetailPage({ params }) {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <Navbar />
         <main className="container mx-auto px-4 py-8">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-gray-300"></div>
+          <div className="flex flex-col justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-gray-300 mb-4"></div>
+            <span className="text-lg text-gray-700 dark:text-gray-300">
+              Retrieving detailed country information...
+            </span>
           </div>
         </main>
       </div>
@@ -91,9 +95,9 @@ export default function CountryDetailPage({ params }) {
     : "N/A";
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col">
       <Navbar />
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-1">
         <div className="mb-6 flex justify-between items-center">
           <Link
             href="/"
@@ -421,6 +425,7 @@ export default function CountryDetailPage({ params }) {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

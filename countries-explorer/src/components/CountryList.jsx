@@ -207,9 +207,19 @@ const CountryList = () => {
             </div>
           </div>
 
+          {/* Countries Count */}
+          {!loading && filteredCountries.length > 0 && (
+            <div className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200">
+              Countries Found: {filteredCountries.length}
+            </div>
+          )}
+
           {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+            <div className="flex flex-col justify-center items-center h-64">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mb-4"></div>
+              <span className="text-lg text-gray-700 dark:text-gray-300">
+                Retrieving country information...
+              </span>
             </div>
           ) : filteredCountries.length === 0 ? (
             <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow p-8">

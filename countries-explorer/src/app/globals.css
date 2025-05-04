@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overscroll-behavior: none; /* Prevents overscroll/bounce effect */
 }
 
 :root {
@@ -40,6 +41,15 @@ body {
   color: var(--foreground);
   transition: background-color var(--transition-speed) ease-in-out,
     color var(--transition-speed) ease-in-out;
+  min-height: 100vh; /* Ensures the body covers the entire viewport height */
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+html {
+  background-color: var(
+    --background
+  ); /* Ensures HTML has the same background as body */
+  overflow-x: hidden; /* Prevents horizontal overflow */
 }
 
 /* Smooth page transitions */
