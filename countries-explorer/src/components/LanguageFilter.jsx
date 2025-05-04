@@ -60,7 +60,7 @@ const LanguageFilter = ({ onFilterChange }) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full md:w-60 px-4 py-2 text-sm bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none text-black dark:text-gray-200 transition-colors duration-200"
+        className="flex items-center justify-between w-full md:w-60 px-4 py-2 text-sm bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none text-gray-900 dark:text-white transition-colors duration-200"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
@@ -71,7 +71,7 @@ const LanguageFilter = ({ onFilterChange }) => {
             : "Filter by Language"}
         </span>
         <svg
-          className="h-5 w-5 text-gray-500 dark:text-gray-400"
+          className="h-5 w-5 text-gray-500 dark:text-gray-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -86,11 +86,11 @@ const LanguageFilter = ({ onFilterChange }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full md:w-60 bg-white dark:bg-gray-700 shadow-lg max-h-60 rounded-md py-1 text-base overflow-auto focus:outline-none sm:text-sm border border-gray-200 dark:border-gray-600">
-          <div className="sticky top-0 z-10 bg-white dark:bg-gray-700 px-3 py-2 border-b border-gray-200 dark:border-gray-600">
+        <div className="absolute z-10 mt-1 w-full md:w-60 bg-white dark:bg-gray-800 shadow-lg max-h-60 rounded-md py-1 text-base overflow-auto focus:outline-none sm:text-sm border border-gray-200 dark:border-gray-700">
+          <div className="sticky top-0 z-10 bg-white dark:bg-gray-800 px-3 py-2 border-b border-gray-200 dark:border-gray-700">
             <input
               type="text"
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-gray-100 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
               placeholder="Search languages..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -101,7 +101,7 @@ const LanguageFilter = ({ onFilterChange }) => {
             className={`w-full text-left px-4 py-2 text-sm ${
               !selectedLanguage
                 ? "bg-indigo-100 dark:bg-indigo-900 text-indigo-900 dark:text-indigo-100"
-                : "text-black dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-600"
+                : "text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
             onClick={() => handleSelectLanguage("")}
           >
@@ -114,7 +114,7 @@ const LanguageFilter = ({ onFilterChange }) => {
               className={`w-full text-left px-4 py-2 text-sm ${
                 selectedLanguage === language.code
                   ? "bg-indigo-100 dark:bg-indigo-900 text-indigo-900 dark:text-indigo-100"
-                  : "text-black dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  : "text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               }`}
               onClick={() => handleSelectLanguage(language.code)}
             >

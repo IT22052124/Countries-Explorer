@@ -164,7 +164,7 @@ const CountryList = () => {
   };
 
   return (
-    <div className="mx-auto container px-4 py-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <div className="mx-auto container px-4 py-2  dark:bg-gray-900 min-h-screen">
       {/* Tabs */}
       {isAuthenticated && (
         <div className="mb-6 border-b border-gray-200 dark:border-gray-700">
@@ -248,6 +248,13 @@ const CountryList = () => {
           <div className="mb-8">
             <SearchBar onSearch={handleFavoritesSearch} />
           </div>
+
+          {/* Favorites Count */}
+          {!favoritesLoading && filteredFavorites.length > 0 && (
+            <div className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200">
+              Favorite Countries: {filteredFavorites.length}
+            </div>
+          )}
 
           {favoritesLoading ? (
             <div className="flex justify-center items-center h-64">

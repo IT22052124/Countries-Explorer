@@ -152,7 +152,7 @@ export default function CountryDetailPage({ params }) {
 
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Region:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -160,7 +160,7 @@ export default function CountryDetailPage({ params }) {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Subregion:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -168,7 +168,7 @@ export default function CountryDetailPage({ params }) {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Capital:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -176,7 +176,7 @@ export default function CountryDetailPage({ params }) {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Population:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -184,7 +184,7 @@ export default function CountryDetailPage({ params }) {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Area:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -192,7 +192,7 @@ export default function CountryDetailPage({ params }) {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">
+                  <span className="text-gray-700 dark:text-gray-300">
                     Coordinates:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -210,7 +210,7 @@ export default function CountryDetailPage({ params }) {
 
               <div className="space-y-3">
                 <div>
-                  <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                  <span className="text-gray-700 dark:text-gray-300 block mb-1">
                     Currencies:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -218,7 +218,7 @@ export default function CountryDetailPage({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                  <span className="text-gray-700 dark:text-gray-300 block mb-1">
                     Languages:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -226,7 +226,7 @@ export default function CountryDetailPage({ params }) {
                   </span>
                 </div>
                 <div>
-                  <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                  <span className="text-gray-700 dark:text-gray-300 block mb-1">
                     Start of Week:
                   </span>
                   <span className="font-medium text-gray-900 dark:text-white">
@@ -246,7 +246,7 @@ export default function CountryDetailPage({ params }) {
               </h2>
 
               <div className="mb-4">
-                <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                <span className="text-gray-700 dark:text-gray-300 block mb-1">
                   Google Maps:
                 </span>
                 <a
@@ -299,7 +299,7 @@ export default function CountryDetailPage({ params }) {
                       <Link
                         key={border}
                         href={`/country/${border}`}
-                        className="px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300 shadow-sm rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors border border-gray-200 dark:border-gray-600"
+                        className="px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm rounded-md text-sm hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors border border-gray-200 dark:border-gray-600"
                       >
                         {border}
                       </Link>
@@ -319,7 +319,7 @@ export default function CountryDetailPage({ params }) {
                 {/* Left Column */}
                 <div className="space-y-3">
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                    <span className="text-gray-700 dark:text-gray-300 block mb-1">
                       Top Level Domain:
                     </span>
                     <span className="font-medium text-gray-900 dark:text-white">
@@ -327,7 +327,7 @@ export default function CountryDetailPage({ params }) {
                     </span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                    <span className="text-gray-700 dark:text-gray-300 block mb-1">
                       Country Codes:
                     </span>
                     <div className="flex gap-2">
@@ -349,7 +349,7 @@ export default function CountryDetailPage({ params }) {
                     </div>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                    <span className="text-gray-700 dark:text-gray-300 block mb-1">
                       Timezones:
                     </span>
                     <div className="flex flex-wrap gap-2">
@@ -368,7 +368,7 @@ export default function CountryDetailPage({ params }) {
                 {/* Right Column */}
                 <div className="space-y-3">
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                    <span className="text-gray-700 dark:text-gray-300 block mb-1">
                       International Dialing:
                     </span>
                     <span className="font-medium text-gray-900 dark:text-white">
@@ -377,7 +377,7 @@ export default function CountryDetailPage({ params }) {
                     </span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                    <span className="text-gray-700 dark:text-gray-300 block mb-1">
                       Driving Side:
                     </span>
                     <span className="font-medium text-gray-900 dark:text-white">
@@ -385,7 +385,7 @@ export default function CountryDetailPage({ params }) {
                     </span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400 block mb-1">
+                    <span className="text-gray-700 dark:text-gray-300 block mb-1">
                       Continents:
                     </span>
                     <div className="flex flex-wrap gap-2">

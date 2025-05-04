@@ -18,19 +18,26 @@ const CountryCard = ({ country }) => {
           />
         </div>
         <div className="p-4">
-          <h2 className="text-lg font-semibold text-black dark:text-white mb-2">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
             {country.name.common}
           </h2>
-          <div className="space-y-1 text-sm text-black dark:text-gray-300">
+          <div className="space-y-1 text-sm text-gray-700 dark:text-gray-200">
             <p>
-              <span className="font-medium">Population:</span>{" "}
+              <span className="font-medium text-gray-900 dark:text-white">
+                Population:
+              </span>{" "}
               {country.population.toLocaleString()}
             </p>
             <p>
-              <span className="font-medium">Region:</span> {country.region}
+              <span className="font-medium text-gray-900 dark:text-white">
+                Region:
+              </span>{" "}
+              {country.region}
             </p>
             <p>
-              <span className="font-medium">Capital:</span>{" "}
+              <span className="font-medium text-gray-900 dark:text-white">
+                Capital:
+              </span>{" "}
               {country.capital?.[0] || "N/A"}
             </p>
           </div>
