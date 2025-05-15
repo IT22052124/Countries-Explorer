@@ -41,12 +41,12 @@ export default function CountryDetailPage({ params }) {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
-          <div className="flex flex-col justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900 dark:border-gray-300 mb-4"></div>
-            <span className="text-lg text-gray-700 dark:text-gray-300">
+        <main className="flex-1 flex items-center justify-center px-4 py-8">
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-t-2 border-b-2 border-gray-900 dark:border-gray-300"></div>
+            <span className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center">
               Retrieving detailed country information...
             </span>
           </div>
